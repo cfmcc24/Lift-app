@@ -1,0 +1,3 @@
+rootProject.name = 'LiftApp'
+
+include ':app'
