@@ -1,15 +1,26 @@
 import React, { Component } from 'react';
 import { View } from 'react-native';
-import LiftsListContainer from './js/containers/LiftsListContainer';
-import AddLift from './js/containers/AddLift';
+import LiftsListContainer from '../containers/LiftsListContainer';
+import AddLift from '../containers/AddLift';
+import AppContainerStyles from '../styles'
+import { Provider } from 'react-redux'
+import { createStore } from 'redux'
+import liftApp from '../reducers'
 
+let store = createStore(liftApp);
 export default class App extends Component {
   render() {
-    <div>
-      <View style={Styles.container}>
-				<AddLift />
-        <LiftsListContainer />
+    return (
+      <View style={ AppContainerStyles.container }>
+        <Provider store= { store }>
+          <View>
+            <AddLift />
+          </View>
+          <View>
+            <LiftsListContainer />
+          </View>
+        </Provider>
       </View>
-    </div>
+    );
   }
 }

@@ -8,6 +8,9 @@ const lifts = (state = [], action) => {
           text: action.text
         }
       ]
+    case 'LOG_LIFT':
+      console.log(action.liftId)
+      return state
     default:
       return state
   }

@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
-import { LiftsList } from '../components/LiftsList';
 import { logLift } from '../actions/Lifts';
+import LiftsList from '../components/LiftsList';
 
 const mapStateToProps = (state) => {
   return {
@@ -19,6 +19,6 @@ const mapDispatchToProps = (dispatch) => {
 const LiftsListContainer = connect(
   mapStateToProps,
   mapDispatchToProps
-) (LiftsList);
+)(LiftsList);
 
 export default LiftsListContainer;

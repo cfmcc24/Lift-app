@@ -7,3 +7,10 @@ export const addLift = text => {
     text
   }
 }
+
+export const logLift = liftId => {
+  return {
+    type: 'LOG_LIFT',
+    id: liftId
+  }
+}
