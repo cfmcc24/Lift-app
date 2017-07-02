@@ -2,22 +2,21 @@
  * @flow
  */
 import React, { Component } from 'react';
-import LiftsListContainer from './js/containers/LiftsListContainer';
-import AddLift from './js/containers/AddLift';
-import {
-  AppRegistry,
-  Text,
-  View
-} from 'react-native';
+import { AppRegistry, View } from 'react-native';
 import Styles from './js/styles/AppContainer';
+import { Provider } from 'react-redux'
+import { createStore } from 'redux'
+import liftApp from './js/reducers'
+import App from './js/components/App'
 
 export default class LiftApp extends Component {
+	let store = createStore(liftApp);
+	
   render() {
     return (
-      <View style={Styles.container}>
-				<AddLift />
-        <LiftsListContainer />
-      </View>
+		  <Provider>
+			  <App />
+			</Provider>
     );
   }
 }
