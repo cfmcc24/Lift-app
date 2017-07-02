@@ -6,10 +6,11 @@ import PropTypes from 'prop-types'
 
 class Lift extends Component {
 	render() {
+	return (
 		<li onClick={this.props.onClick}>
 			{this.props.text}
 		</li>
-	});
+	)};
 }
 
 Lift.propTypes = {

@@ -2,8 +2,8 @@
  * @flow
  */
 import React, { Component } from 'react';
-import PropTypes from 'prop-types'
-import Lift from './Lift'
+import PropTypes from 'prop-types';
+import Lift from './Lift';
 
 class LiftsTable extends Component {
 	render() {
