@@ -1,5 +1,8 @@
-import { combineReducers } from 'redux'
+import { combineReducers } from 'redux';
+import lifts from './Lifts';
 
-const liftApp = combineReducers({})
+const liftApp = combineReducers({
+  lifts
+})
 
-export default liftApp
+export default liftApp;
