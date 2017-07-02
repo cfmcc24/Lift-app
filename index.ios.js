@@ -2,41 +2,22 @@
  * @flow
  */
 import React, { Component } from 'react';
-import LiftsTable from './js/LiftsTable';
+import LiftsTable from './js/components/LiftsTable';
 import {
-	AppRegistry,
-	StyleSheet,
-	Text,
-	View
+  AppRegistry,
+  Text,
+  View
 } from 'react-native';
+import Styles from './js/styles/LiftsTable';
 
 export default class LiftApp extends Component {
-	render() {
-		return (
-			<View style={styles.container}>
-				<LiftsTable />
-			</View>
-		);
-	}
+  render() {
+    return (
+      <View style={Styles.container}>
+        <LiftsTable />
+      </View>
+    );
+  }
 }
-
-const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-		justifyContent: 'center',
-		alignItems: 'center',
-		backgroundColor: '#F5FCFF',
-	},
-	welcome: {
-		fontSize: 20,
-		textAlign: 'center',
-		margin: 10,
-	},
-	instructions: {
-		textAlign: 'center',
-		color: '#333333',
-		marginBottom: 5,
-	},
-});
 
 AppRegistry.registerComponent('LiftApp', () => LiftApp);
