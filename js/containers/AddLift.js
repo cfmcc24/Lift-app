@@ -8,25 +8,6 @@ class AddLift extends Component {
     let input;
     return (
       <View>
-        <form
-          onSubmit={e => {
-            e.preventDefault()
-            if (!input.value.trim()) {
-              return
-            }
-            dispatch(addLift(input.value))
-            input.value = ''
-          }}
-        >
-          <input
-            ref={node => {
-              input = node
-            }}
-          />
-          <button type="submit">
-            Add Lift
-          </button>
-        </form>
       </View>
     );
   }

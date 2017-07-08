@@ -8,6 +8,7 @@ import { createStore } from 'redux'
 import liftApp from '../reducers'
 
 let store = createStore(liftApp);
+
 export default class App extends Component {
   render() {
     return (
@@ -15,8 +16,6 @@ export default class App extends Component {
         <Provider store= { store }>
           <View>
             <AddLift />
-          </View>
-          <View>
             <LiftsListContainer />
           </View>
         </Provider>
