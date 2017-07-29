@@ -8,12 +8,12 @@ import PreviousLiftStyles from '../styles/PreviousLift';
 class RecentLift extends Component {
   render() {
     return (
-      <View style = {{flex: 1, flexDirection: 'column', paddingTop: 25}}>
-        <View style = {{flex: 1, flexDirection: 'row', justifyContent: 'space-between'}}> 
+      <View style = {PreviousLiftStyles.outerContainer}>
+        <View style = {PreviousLiftStyles.contentContainer}> 
           <Text style = {PreviousLiftStyles.title}>
             Sup Dude
           </Text>
-          <Text style = {{textAlign: 'right'}}>
+          <Text style = {PreviousLiftStyles.date}>
             07/30/2017
           </Text>
         </View>

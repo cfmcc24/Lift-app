@@ -5,26 +5,24 @@ import { Provider } from 'react-redux'
 
 import LiftsListContainer from './js/containers/LiftsListContainer';
 import RecentLiftContainer from './js/containers/RecentLiftContainer';
-import liftApp from './js/reducers'
+import liftApp from './js/reducers';
+import AppContainerStyles from './js/styles/AppContainer';
 
 let store = createStore(liftApp);
+let styles = AppContainerStyles;
 
 export default class JustifyContentBasics extends Component {
-
 	render() {
 		return (
 			<Provider store = { store }>
-				<View style={{
-					flex: 1,
-					flexDirection: 'column',
-					justifyContent: 'space-between'}}>
-					<View style = {{flex: 1, backgroundColor: 'powderblue'}}>
-						<View style = {{flex: 1, marginRight: 15, marginLeft: 15}}>
+				<View style={styles.container}>
+					<View style = {styles.recentLift}>
+						<View style = {styles.contentContainer}>
 							<RecentLiftContainer />
 						</View>
 					</View>
-					<View style = {{flex: 3, backgroundColor: 'skyblue'}}>
-						<View style = {{flex: 1, marginRight: 15, marginLeft: 15}}>
+					<View style = {styles.liftsList}>
+						<View style = {styles.contentContainer}>
 							<LiftsListContainer />
 						</View>
 					</View>
@@ -34,5 +32,4 @@ export default class JustifyContentBasics extends Component {
 	}
 };
 
-// skip this line if using Create React Native App
 AppRegistry.registerComponent('LiftApp', () => JustifyContentBasics);
