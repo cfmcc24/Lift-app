@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { View, Button } from 'react-native';
 import { connect } from 'react-redux';
 import { addLift } from '../actions/Lifts';
-import { View, Button } from 'react-native';
 
 class AddLift extends Component {
+  addLift() {
+    this.props.dispatch(addLift('Hey'));
+  }
+
   render() {
-    let input;
     return (
       <View>
         <Button
@@ -17,11 +21,11 @@ class AddLift extends Component {
       </View>
     );
   }
-
-  addLift() {
-    this.props.dispatch(addLift("Hey"));
-  }
 }
+
+AddLift.propTypes = {
+  dispatch: PropTypes.func.isRequired,
+};
 
 AddLift = connect()(AddLift);
 export default AddLift;

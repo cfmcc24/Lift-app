@@ -2,7 +2,7 @@ import { combineReducers } from 'redux';
 import lifts from './Lifts';
 
 const liftApp = combineReducers({
-  lifts
-})
+  lifts,
+});
 
 export default liftApp;

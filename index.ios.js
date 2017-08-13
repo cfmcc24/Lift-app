@@ -1,14 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { AppRegistry } from 'react-native';
 
-import App from './js/App'
+import App from './js/App';
 
-export default class Main extends Component {
-	render() {
-		return (
-      <App/>
-		);
-	}
-};
+function Main() {
+  return (
+    <App />
+  );
+}
 
 AppRegistry.registerComponent('LiftApp', () => Main);

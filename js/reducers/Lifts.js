@@ -5,14 +5,14 @@ const lifts = (state = [], action) => {
         ...state,
         {
           id: action.id,
-          text: action.text
-        }
-      ]
+          text: action.text,
+        },
+      ];
     case 'LOG_LIFT':
-      return state
+      return state;
     default:
-      return state
+      return state;
   }
-}
+};
 
 export default lifts;
