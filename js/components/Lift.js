@@ -1,22 +1,12 @@
-/**
- * @flow
- */
-import React, { Component }  from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import { View } from 'react-native';
 
-class Lift extends Component {
-  render() {
-    return (
-      <View>
-        A Lift
-      </View>
-    );
-  }
+function Lift() {
+  return (
+    <View>
+      A Lift
+    </View>
+  );
 }
 
-Lift.propTypes = {
-  onClick: PropTypes.func.isRequired,
-  text: PropTypes.string.isRequired
-}
-
-export default Lift
+export default Lift;
