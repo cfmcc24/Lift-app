@@ -1,4 +1,5 @@
 import { connect } from 'react-redux';
+import { fetchRecentLift } from '../actions/Lifts';
 import RecentLift from '../components/RecentLift';
 
 const mapStateToProps = state => ({
@@ -6,8 +7,8 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  onRecentLiftClick: (id) => {
-    dispatch(collapseLift(id));
+  fetchRecentLift: () => {
+    dispatch(fetchRecentLift());
   },
 });
 
