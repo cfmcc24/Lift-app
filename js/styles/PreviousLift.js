@@ -1,10 +1,21 @@
 import { StyleSheet } from 'react-native';
 
 const PreviousLiftStyles = StyleSheet.create({
-  title: {
+  details: {
     flex: 1,
-    fontSize: 32,
-    fontWeight: 'bold',
+    flexDirection: 'row',
+  },
+  setsNumber: {
+    fontSize: 24,
+    color: '#FF2D55',
+  },
+  setsText: {
+    fontSize: 12,
+  },
+  of: {
+    paddingLeft: 5,
+    paddingRight: 5,
+    fontSize: 12,
   },
   date: {
     textAlign: 'right',

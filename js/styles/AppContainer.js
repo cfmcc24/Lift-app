@@ -8,7 +8,7 @@ const AppContainerStyles = StyleSheet.create({
   },
   recentLift: {
     flex: 1,
-    backgroundColor: 'powderblue',
+    backgroundColor: '#FFFFFF',
   },
   contentContainer: {
     flex: 1,

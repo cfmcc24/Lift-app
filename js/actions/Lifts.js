@@ -17,7 +17,7 @@ export const logLift = liftId => ({
 export const fetchRecentLift = () => ({
   type: 'INIT_LIFTS',
   recentLift: {
-    liftName: 'Dad',
+    liftName: 'Previous Lift',
     liftDate: '08/13/2017',
     sets: 3,
     reps: 5,

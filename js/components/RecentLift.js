@@ -10,20 +10,25 @@ class RecentLift extends Component {
 
   render() {
     const recentLift = this.props.recentLift;
+    const styles = PreviousLiftStyles;
     return (
-      <View style={PreviousLiftStyles.outerContainer}>
-        <View style={PreviousLiftStyles.contentContainer}>
-          <Text style={PreviousLiftStyles.title}>
+      <View style={styles.outerContainer}>
+        <View style={styles.contentContainer}>
+          <Text style={styles.title}>
             {recentLift.liftName}
           </Text>
-          <Text style={PreviousLiftStyles.date}>
+          <Text style={styles.date}>
             {recentLift.liftDate}
           </Text>
         </View>
-        <Text style={PreviousLiftStyles.title}>
-          {recentLift.sets} sets of {recentLift.reps} reps
-        </Text>
-        <Text style={PreviousLiftStyles.title}>
+        <View style={styles.details}>
+          <Text style={styles.setsNumber}>{recentLift.sets}</Text>
+          <Text style={styles.setsText}>sets</Text>
+          <Text style={styles.of}>of</Text>
+          <Text style={styles.setsNumber}>{recentLift.reps}</Text>
+          <Text style={styles.setsText}>reps</Text>
+        </View>
+        <Text style={styles.title}>
           Avg BPM: {recentLift.avgBpm} Max BPM: {recentLift.maxBpm}
         </Text>
       </View>
